@@ -30,7 +30,7 @@ const (
 type (
 	requestTokenRequest struct {
 		ConsumerKey string `json:"consumer_key"`
-		RedirectURI string `json:"redirectUri"`
+		RedirectURI string `json:"redirect_uri"`
 	}
 
 	accessTokenRequest struct {
