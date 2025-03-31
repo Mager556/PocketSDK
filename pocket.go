@@ -184,7 +184,7 @@ func (c *Client) doHTTP(ctx context.Context, endpoint string, body interface{}) 
 
 	resp, err := c.client.Do(req)
 	if err != nil {
-		return url.Values{}, errors.Join(err, errors.New("Failed to send http request"))
+		return url.Values{}, errors.Join(err, errors.New("Failed to send http request."))
 	}
 	defer resp.Body.Close()
 
