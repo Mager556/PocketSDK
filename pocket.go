@@ -175,7 +175,7 @@ func (c *Client) doHTTP(ctx context.Context, endpoint string, body interface{}) 
 		return url.Values{}, errors.Join(err, errors.New("Failed to marshal body"))
 	}
 
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, endpoint, bytes.NewBuffer(b))
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, host+endpoint, bytes.NewBuffer(b))
 	if err != nil {
 		return url.Values{}, errors.Join(err, errors.New("Failed to create request"))
 	}
