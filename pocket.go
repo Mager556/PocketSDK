@@ -29,12 +29,12 @@ const (
 
 type (
 	requestTokenRequest struct {
-		ConsumerKey string `json:"consumerKey"`
+		ConsumerKey string `json:"consumer_key"`
 		RedirectURI string `json:"redirectUri"`
 	}
 
 	accessTokenRequest struct {
-		ConsumerKey string `json:"consumerKey"`
+		ConsumerKey string `json:"consumer_key"`
 		Code        string `json:"code"`
 	}
 
@@ -48,7 +48,7 @@ type (
 		Title       string `json:"title"`
 		Tags        string `json:"tags"`
 		TweetId     int    `json:"tweet_id"`
-		ConsumerKey string `json:"consumerKey"`
+		ConsumerKey string `json:"consumer_key"`
 		AccessToken string `json:"access_token"`
 	}
 
@@ -184,7 +184,7 @@ func (c *Client) doHTTP(ctx context.Context, endpoint string, body interface{}) 
 
 	resp, err := c.client.Do(req)
 	if err != nil {
-		return url.Values{}, errors.Join(err, errors.New("Failed to send http request."))
+		return url.Values{}, errors.Join(err, errors.New("Failed to send http request..."))
 	}
 	defer resp.Body.Close()
 
