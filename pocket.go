@@ -161,7 +161,7 @@ func (c *Client) GetAccessToken(ctx context.Context, requestToken string) (strin
 		return "", err
 	}
 
-	accessToken := values.Get("code")
+	accessToken := values.Get("access_token")
 	if accessToken == "" {
 		return "", errors.New("Empty access token in API response")
 	}
