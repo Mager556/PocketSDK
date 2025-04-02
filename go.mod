@@ -1,4 +1,4 @@
-module github.com/Mager556/pocketSDK
+module github.com/Mager556/PocketSDK
 
 go 1.24.0
 
